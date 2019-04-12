@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    {% block head %}
+        <title>{{ pagetitle|striptags }}</title>
+        <meta charset="utf-8">
+        <meta name="description" content="{{ pagetitle|striptags }}">
+        <meta name="author" content="Dutchento">
+    {% endblock %}
+    </head>
+
+    <body>
+        <div role="main" id="content">
+            {% block content %}{% endblock %}
+        </div>
+        {% block jsscripts %}{% endblock %}
+    </body>
+</html>
